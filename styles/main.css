@@ -16,26 +16,40 @@ img {
 
 /***************** NAV *****************/
 
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgray;
+}
+
 nav a:hover {
   text-decoration: underline;
 }
 
 /**************** HERO *****************/
 
+.page-header {
+  display: flex;
+  justify-content: center;
+  color: #42b6f4;
+  padding: 1rem;
+}
+
 header img {
   max-height: 6rem;
+  padding-right: 2rem;
 }
 
 h1 .logo-w {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 /**************** ASIDE ****************/
 
 input[type="submit"] {
   padding: .25rem;
-  background-color: #3D7FCF;
-  border: 1px solid #3D7FCF;
+  background-color: #3d7fcf;
+  border: 1px solid #3d7fcf;  /* warning for same color border - but we need to set the border so we can set the border-radius */
   border-radius: 5px;
   font-size: .75rem;
   color: white;
@@ -49,7 +63,7 @@ section {
 
 h2 {
   padding-top: 1.5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: #2d2d2d;
 }
@@ -58,4 +72,17 @@ h3 {
   font-size: 1.2rem;
   text-align: center;
   color: #2d2d2d;
+}
+
+.item-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.item-container div {
+  max-width: 40rem;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
 }
