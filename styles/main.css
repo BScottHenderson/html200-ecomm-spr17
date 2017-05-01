@@ -28,14 +28,14 @@ nav a:hover {
 
 /**************** HERO *****************/
 
-.page-header {
+.hero {
   display: flex;
   justify-content: center;
   color: #42b6f4;
 }
 
 header {
-  background-color: #333;
+  background-color: #333; /* why does this stop working if I move it to the .hero spec above? */
 }
 
 header img {
@@ -48,6 +48,10 @@ h1 .logo-w {
 }
 
 /**************** ASIDE ****************/
+
+aside {
+  margin: 1rem;
+}
 
 input[type="submit"] {
   padding: .25rem;
