@@ -1,13 +1,14 @@
-#snow {
+.snow {
 	background: none;
 	font-family: Androgyne;
 	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img/s2.png'), url('http://www.wearewebstars.dk/codepen/img/s3.png');
-  /*height: 100%; snow only in the page header, not the entire page */
-  height: 12rem;
-	left: 0;
+	/* snow only in the container with the class "snow" *not* the entire page
 	position: absolute;
-	top: 2rem; /* don't start snowing until we're below the nav line in the header */
+	height: 100%;
 	width: 100%;
+	left: 0;
+	top: 0;
+	*/
 	z-index: 1;
   /*
 	-webkit-animation: snow 10s linear infinite;
