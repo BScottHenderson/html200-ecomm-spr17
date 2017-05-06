@@ -1,6 +1,8 @@
 body {
   font-size: 100%;
   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  background: lightgray;
+  background: linear-gradient(lightgray, gray);
 }
 
 p {
@@ -60,7 +62,7 @@ input[type="submit"] {
   background-color: #3d7fcf;
   border: 1px solid #3d7fcf;  /* warning for same color border - but we need to set the border so we can set the border-radius */
   border-radius: 5px;
-  font-size: .75rem;
+  font-size: 1rem;
   color: white;
 }
 
