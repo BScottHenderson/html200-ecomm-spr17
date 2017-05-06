@@ -35,7 +35,9 @@ nav a:hover {
 }
 
 header {
-  background-color: #333; /* why does this stop working if I move it to the .hero spec above? */
+  background-color: #333; /* we can't add background-color to the .hero section above
+                           * because that section also uses the "snow" class which has
+                           * a background-image which overrides the background-color */
 }
 
 header img {
