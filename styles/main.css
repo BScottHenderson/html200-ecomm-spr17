@@ -1,8 +1,7 @@
 body {
   font-size: 100%;
   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-  background: lightgray;
-  background: linear-gradient(lightgray, gray);
+  background: white;
 }
 
 p {
@@ -11,9 +10,8 @@ p {
   color: #2d2d2d;
 }
 
-/* TODO: size images manually so this is not necessary */
 img {
-  max-height: 20rem;
+  max-width: 100%;
 }
 
 /***************** NAV *****************/
@@ -86,6 +84,8 @@ h3 {
 }
 
 .item-container {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
