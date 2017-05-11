@@ -97,3 +97,7 @@ h3 {
   margin: 1rem;
   padding: 1rem;
 }
+
+.item-container .modify-cart {
+  float: right;
+}
