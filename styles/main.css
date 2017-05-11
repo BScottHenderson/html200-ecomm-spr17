@@ -101,3 +101,7 @@ h3 {
 .item-container .modify-cart {
   float: right;
 }
+
+.item-container .modify-cart button {
+  width: 3rem;
+}
