@@ -1,6 +1,4 @@
 
-// add productID
-//
 var products = [
   {
     "name": "Reversible Plaid",
