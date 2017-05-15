@@ -10,16 +10,37 @@ p {
   color: #2d2d2d;
 }
 
+@media (max-width: 400px) {
+  p { font-weight: normal; }
+}
+
 img {
   max-width: 100%;
 }
 
 /***************** NAV *****************/
 
+nav {
+  font-size: 2rem;
+}
+
+@media (max-width: 440px) {
+  nav {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
   background-color: lightgray;
+}
+
+@media (max-width: 440px) {
+  nav ul {
+    display: inline-block;
+  }
 }
 
 nav a:hover {
@@ -47,6 +68,10 @@ header img {
 
 h1 .logo-w {
   font-size: 4rem;
+}
+
+@media (max-width: 440px) {
+  header img { display: none; }
 }
 
 /**************** ASIDE ****************/
