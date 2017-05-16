@@ -71,7 +71,16 @@ h1 .logo-w {
 }
 
 @media (max-width: 440px) {
-  header img { display: none; }
+  header img {
+    display: none;
+    padding: 0;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  h1 .logo-w {
+    font-size: 2rem;
+  }
 }
 
 /**************** ASIDE ****************/
