@@ -17,7 +17,7 @@ function addToCart(_productID) {
     cart.push(products[i]);
   }
 
-  console.log("Cart length = " + cart.length);
+  $("#shopping-cart-count").text(cart.length);
 
   event.preventDefault();
 }
@@ -29,7 +29,7 @@ function removeFromCart(_productID) {
     cart.splice(i, 1);
   }
 
-  console.log("Cart length = " + cart.length);
+  $("#shopping-cart-count").text(cart.length);
 
   event.preventDefault();
 }
