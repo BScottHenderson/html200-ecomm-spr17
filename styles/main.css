@@ -47,6 +47,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav #shopping-cart-count {
+  font-size: 60%;
+  border-radius: 50%;
+  padding: 0 0.25rem 0;
+  margin-left: 0.5rem;
+
+  background: #333;
+  border: 1px solid #333;
+  color: white;
+
+  text-align: center;
+}
+
 /**************** HERO *****************/
 
 .hero {
