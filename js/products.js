@@ -205,8 +205,8 @@ $(document).ready(function () {
         "<p>" + products[i].description + "</p>" +
         "<p>" + products[i].price + "</p>" +
         "<p class='modify-cart'>" +
-          "<button type='button' onclick='addToCart(\'" + products[i].productID + "\');'>+</button>" +
-          "<button type='button' onclick='removeFromCart(\'" + products[i].productID + "\');''>-</button>" +
+          "<button type='button' onclick='addToCart(\"" + products[i].productID + "\");'>+</button>" +
+          "<button type='button' onclick='removeFromCart(\"" + products[i].productID + "\");'>-</button>" +
         "</p>" +
       "</div>"
     );
