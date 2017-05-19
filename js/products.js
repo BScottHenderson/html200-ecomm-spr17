@@ -178,12 +178,20 @@ var products = [
 ];
 
 $(document).ready(function () {
+
   for (var i = 0; i < products.length; ++i) {
 
-    var srcsetSizes = "";
+    var div = document.createElement("div");
+
+    var h3  = document.createElement("h3");
+    var h3Text = document.createTextNode(products[i].name);
+    h3.appendChild(h3Text);
+    div.appendChild(h3);
+
+    var img = document.createElement("img");
     if (products[i].imageSizes.length > 0) {
-      var srcset = "srcset='";
-      var sizes  = "sizes='";
+      var srcset = "";
+      var sizes  = "";
       for (var j = 0; j < products[i].imageSizes.length; ++j) {
           if (j > 0) {
             srcset += ", ";
@@ -192,23 +200,40 @@ $(document).ready(function () {
           srcset += "images/" + products[i].imageSizes[j].imageFileName + " " + products[i].imageSizes[j].imageWidth + "w";
           sizes  += products[i].imageSizes[j].mediaCondition + " " + products[i].imageSizes[j].sourceSize + "px";
       }
-      srcset += "'";
-      sizes  += "'";
-      srcsetSizes = srcset + " " + sizes;
+      img.setAttribute("srcset", srcset);
+      img.setAttribute("sizes", sizes);
     }
+    img.setAttribute("src", "images/" + products[i].imageFileName);
+    img.setAttribute("alt", products[i].imageAlt);
+    div.appendChild(img);
 
-    $("#scarves .item-container").append(
-      "<div>" +
-        "<h3>" + products[i].name + "</h3>" +
-        "<img " + srcsetSizes +
-          "src='images/" + products[i].imageFileName + "' alt='" + products[i].imageAlt + "'>" +
-        "<p>" + products[i].description + "</p>" +
-        "<p>" + products[i].price + "</p>" +
-        "<p class='modify-cart'>" +
-          "<button type='button' onclick='addToCart(\"" + products[i].productID + "\");'>+</button>" +
-          "<button type='button' onclick='removeFromCart(\"" + products[i].productID + "\");'>-</button>" +
-        "</p>" +
-      "</div>"
-    );
+    var pDescription = document.createElement("p");
+    var pDescriptionText = document.createTextNode(products[i].description);
+    pDescription.appendChild(pDescriptionText);
+    div.appendChild(pDescription);
+
+    var pPrice = document.createElement("p");
+    var pPriceText = document.createTextNode(products[i].Price);
+    pPrice.appendChild(pPriceText);
+    div.appendChild(pPrice);
+
+    // Modify cart paragraph.
+    var pModifyCart = document.createElement("p");
+    pModifyCart.setAttribute("class", "modify-cart");
+
+    var buttonAdd = document.createElement("button");
+    buttonAdd.setAttribute("type", "button");
+    buttonAdd.setAttribute("onclick", "addToCart(\"" + products[i].productID + "\")");
+    pModifyCart.appendChild(buttonAdd);
+
+    var buttonRemove = document.createElement("button");
+    buttonRemove.setAttribute("type", "button");
+    buttonRemove.setAttribute("onclick", "removeFromCart(\"" + products[i].productID + "\")");
+    pModifyCart.appendChild(buttonRemove);
+
+    div.appendChild(pModifyCart);
+
+    // Add the <div> we just created to the #scarves item container.
+    $("#scarves .item-container").append(div);
   }
 });
