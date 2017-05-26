@@ -71,3 +71,7 @@ Each weekly assignment will be graded independently. There will not be a final g
 
 ## Testing
 My primary method of testing for site quality is to simply resize the browser window.  Visiting the site on my phone is helpful but slightly cumbersome since it requires pushing changes to GitHub and waiting for the site to update and then refreshing the page on my phone.  Using the Atom atom-live-server package I can see changes instantly on my desktop and by resizing the browser window I can more or less simulate the behavior I would see on smaller devices.  I can also see changes to layout (and anything else) as they happen as I am resizing the browser window.  No substitute for final testing using different devices but more than good enough for initial testing.
+
+Having said all of that I do still test the site on my phone.  If I had a tablet I would use that.  Also, whether on a phone or other device or just in a desktop browser, I found it invaluable to test the site via GitHub Pages or some other hosting service.  If nothing else I have discovered problems linking to images, stylesheets, or script files due to inconsistencies with the path to these various files.  Viewing the site locally seems to be more forgiving fo these inconsistencies so the site may look OK when viewed locally and yet not so much when viewed on a server.
+
+Also I am aware that there are emulators for various browsers available.  I have not as yet used those.  I also have at least three different browsers installed on my machine which I could use for testing.
