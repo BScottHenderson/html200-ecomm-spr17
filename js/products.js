@@ -213,7 +213,7 @@ $(document).ready(function () {
     div.appendChild(pDescription);
 
     var pPrice = document.createElement("p");
-    var pPriceText = document.createTextNode(products[i].Price);
+    var pPriceText = document.createTextNode("$" + products[i].price);
     pPrice.appendChild(pPriceText);
     div.appendChild(pPrice);
 
@@ -224,11 +224,15 @@ $(document).ready(function () {
     var buttonAdd = document.createElement("button");
     buttonAdd.setAttribute("type", "button");
     buttonAdd.setAttribute("onclick", "addToCart(\"" + products[i].productID + "\")");
+    var buttonAddText = document.createTextNode("+");
+    buttonAdd.appendChild(buttonAddText);
     pModifyCart.appendChild(buttonAdd);
 
     var buttonRemove = document.createElement("button");
     buttonRemove.setAttribute("type", "button");
     buttonRemove.setAttribute("onclick", "removeFromCart(\"" + products[i].productID + "\")");
+    var buttonRemoveText = document.createTextNode("-");
+    buttonRemove.appendChild(buttonRemoveText);
     pModifyCart.appendChild(buttonRemove);
 
     div.appendChild(pModifyCart);
