@@ -33,3 +33,18 @@ function removeFromCart(_productID) {
 
   event.preventDefault();
 }
+
+function showCart() {
+
+  if (cart.length > 0) {
+    var cartContents = "";
+    var totalCost = 0.0;
+    for (var i = 0; i < cart.length; ++i) {
+      cartContents += cart[i].name + " $" + cart[i].price + "\n";
+      totalCost += cart[i].price;
+    }
+    cartContents += "\n" + "Total: $" + totalCost;
+
+    alert(cartContents);
+  }
+}
